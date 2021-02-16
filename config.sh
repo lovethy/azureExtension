@@ -13,8 +13,8 @@ YAML_PATH2=/data/SIEM/elasticsearch/config/node2.origin
 
 cp -rf $YAML_PATH2 $YAML_PATH
 
-sed -i "s|ESDTNODE|n$TIMESTAMP|" $YAML_PATH/elastic.yml
+sed -i "s|ESDTNODE|n$TIMESTAMP|" $YAML_PATH/elasticsearch.yml
 
-sed -i "s|MYPRIVATEIP|$MYIP|" $YAML_PATH/elastic.yml
+sed -i "s|MYPRIVATEIP|$MYIP|" $YAML_PATH/elasticsearch.yml
 
 mv $YAML_PATH /data/SIEM/elasticsearch/config/n$TIMESTAMP

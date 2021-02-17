@@ -18,8 +18,8 @@ sed -i "s|ESDTNODE|n$TIMESTAMP|" $YAML_PATH/elasticsearch.yml
 sed -i "s|MYPRIVATEIP|$MYIP|" $YAML_PATH/elasticsearch.yml
 
 # jvm.option 수정
-sed -i "s|ESDTNODE|n$TIMESTAMP|" $YAML_PATH/jvm.option
+sed -i "s|ESDTNODE|n$TIMESTAMP|" $YAML_PATH/jvm.options
 
 mv $YAML_PATH /data/SIEM/elasticsearch/config/n$TIMESTAMP
 
-su - igloosec -c "/data/SIEM/elasticsearch/startES"
+su - igloosec -c "/data/SIEM/elasticsearch/startES" 
